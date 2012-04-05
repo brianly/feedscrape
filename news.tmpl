@@ -1,0 +1,19 @@
+callback1001(
+{
+	"items":
+    [
+        {% for entry in feed %}
+        {
+            "text": "{{ entry.link }}",
+            "id": "{{ entry.id }}",
+            "strapline": "date",
+            "published": "{{ entry.published }}",
+            "summary": "{{ entry.summary }}",
+            "title": "{{ entry.title }}",
+            "summary_detail": "{{ entry.summary_detail.value }}",
+
+            "leaf": "true"
+        },
+        {% endfor %}
+	]
+}	);
